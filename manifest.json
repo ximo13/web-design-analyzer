@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Web Design Analyzer",
+  "version": "1.0.0",
+  "description": "Analiza la pagina actual y detecta colores, fuentes, botones y enlaces.",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "Web Design Analyzer",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

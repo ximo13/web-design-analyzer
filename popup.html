@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Analyzer</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <header class="popup__header">
+        <div>
+          <h1>Web Design Analyzer</h1>
+          <p>Inspeccion rapida de la pagina actual</p>
+        </div>
+        <button id="analyzeButton" class="analyze-button" type="button">
+          Analizar
+        </button>
+      </header>
+
+      <section class="status" id="status">Listo para analizar.</section>
+
+      <section class="summary" id="summary" hidden>
+        <article class="summary__card">
+          <span class="summary__label">Colores</span>
+          <strong id="colorCount">0</strong>
+        </article>
+        <article class="summary__card">
+          <span class="summary__label">Fuentes</span>
+          <strong id="fontCount">0</strong>
+        </article>
+        <article class="summary__card">
+          <span class="summary__label">Botones</span>
+          <strong id="buttonCount">0</strong>
+        </article>
+        <article class="summary__card">
+          <span class="summary__label">Enlaces</span>
+          <strong id="linkCount">0</strong>
+        </article>
+      </section>
+
+      <section class="results">
+        <div class="panel">
+          <div class="panel__title">Colores</div>
+          <div id="colorsList" class="swatches empty">Sin datos</div>
+        </div>
+
+        <div class="panel">
+          <div class="panel__title">Fuentes</div>
+          <ul id="fontsList" class="list empty">
+            <li>Sin datos</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <div class="panel__title">Botones</div>
+          <ul id="buttonsList" class="list empty">
+            <li>Sin datos</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <div class="panel__title">Enlaces</div>
+          <ul id="linksList" class="list empty">
+            <li>Sin datos</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
