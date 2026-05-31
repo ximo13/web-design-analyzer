@@ -13,9 +13,14 @@
           <h1>Web Design Analyzer</h1>
           <p>Inspeccion rapida de la pagina actual</p>
         </div>
-        <button id="analyzeButton" class="analyze-button" type="button">
-          Analizar
-        </button>
+        <div class="header__actions">
+          <button id="analyzeButton" class="action-button action-button--primary" type="button">
+            Analizar
+          </button>
+          <button id="generatePromptButton" class="action-button action-button--secondary" type="button">
+            Generar prompt para Codex
+          </button>
+        </div>
       </header>
 
       <section class="status" id="status">Listo para analizar.</section>
@@ -64,6 +69,21 @@
           <ul id="linksList" class="list empty">
             <li>Sin datos</li>
           </ul>
+        </div>
+
+        <div class="panel">
+          <div class="panel__title">Prompt para Codex</div>
+          <textarea
+            id="promptOutput"
+            class="prompt-output"
+            placeholder="Aqui aparecera el prompt generado a partir del analisis."
+          ></textarea>
+          <div class="prompt-actions">
+            <button id="copyPromptButton" class="action-button action-button--primary" type="button">
+              Copiar prompt
+            </button>
+            <span id="copyFeedback" class="copy-feedback" hidden>Prompt copiado</span>
+          </div>
         </div>
       </section>
     </main>
